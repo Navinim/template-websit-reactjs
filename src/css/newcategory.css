@@ -1,0 +1,35 @@
+.newCategoryContainer{
+    flex: 2;
+    padding: 10px;
+    margin: 20px;
+    background-color: inherit;
+    -webkit-box-shadow: -3px 3px 9px -3px #0d3c02;
+    box-shadow: -3px 3px 9px -3px #1b5203;
+}
+.addCategoryForm{
+    margin-top: 10px;
+}
+.addCategoryItem{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.addCategoryItem>label{
+    color: gray;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.addCategoryItem>input,select{
+    padding: 10px;
+}
+.addCategoryButton{
+    margin-top: 10px;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: teal;
+    color: white;
+    font-weight: 300;
+    cursor: pointer;
+}
