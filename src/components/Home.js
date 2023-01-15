@@ -1,12 +1,13 @@
 import React from "react";
-import { Button, Card, CardContent, CardMedia, Typography, TextField } from "@mui/material";
-import { GroupOutlined, AddLocationAltOutlined, PhoneInTalkOutlined, MarkEmailReadOutlined } from '@mui/icons-material';
-import Fab from '@mui/material/Fab'
+import { Button, Card, CardContent, CardMedia, Typography} from "@mui/material";
+import { GroupOutlined} from '@mui/icons-material';
 import Footer from "./Footer";
 import FeatureCard from '../card/FeatureCard'
 import Offers from "./Offers";
 import ProductCard from "../card/ProductCard";
 import { Link } from "react-router-dom";
+import ContactUs from "./ContactUs";
+import ContactInfo from "./ContactInfo";
 
 
 
@@ -103,43 +104,9 @@ export function Home() {
         <div className="container mx-auto mt-1">
           <Offers />
         </div>
-        <div id="contact" className="mt-2 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
-          <form className=" mx-auto mt-12 max-w-3xl">
-            <h2 className="uppercase font-bold">Contact us</h2>
-            <div className="mb-8 flex gap-8">
-              <TextField variant="standard" size="lg" label="Full Name" />
-              <TextField variant="standard" size="lg" label="Email Address" />
-            </div>
-            <TextField variant="standard" size="lg" label="Message" multiline />
-            <Button variant="contained" size="lg" className="">
-              Send Message
-            </Button>
-          </form>
-          <div className=" mx-auto mt-12 max-w-3xl">
-            <h3 className="uppercase font-bold mb-4">Contact Info</h3>
-            <div className="flex gap-3 mb-3">
-              <Fab color='error'> <AddLocationAltOutlined /></Fab>
-              <div>
-                <h1 className="font-bold">Address</h1>
-                <span>Hello Nepal Tower,KTM</span>
-              </div>
-            </div>
-            <div className="flex gap-3 mb-3">
-              <Fab color='success'> <PhoneInTalkOutlined /></Fab>
-              <div>
-                <h1 className="font-bold">Phone Number</h1>
-                <p>+977-9860000000</p>
-                <span>014-5555555</span>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <Fab color='primary'> <MarkEmailReadOutlined /></Fab>
-              <div>
-                <h1 className="font-bold">Address</h1>
-                <span>Hello Nepal Tower,KTM</span>
-              </div>
-            </div>
-          </div>
+        <div id="contact" className="mt-2 grid grid-cols-1 gap-12 gap-x-20 md:grid-cols-2 xl:grid-cols-2">
+          <ContactUs/>
+          <ContactInfo/>          
         </div>
       </section>
       <div className="bg-blue-gray-50/50">

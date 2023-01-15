@@ -18,8 +18,8 @@ export const createProduct=async (product)=>{
     }
 }
 // to get product by arrival date and sort ,limit,
-export const getProduct=(sortBy)=>{
-    return fetch(`${API}/productlist?sortBy=${sortBy}&order=desc&limit=6`,{
+export const getProduct=()=>{
+    return fetch(`${API}/productlist`,{
         method:"GET"
     })
     .then(res=>{
@@ -28,13 +28,14 @@ export const getProduct=(sortBy)=>{
     .catch(error=>console.log(error))
 }
 // to filter product by category
-export const filterProduct=()=>{
-    return fetch(`${API}/productlist/:categoryName`,{
-        method:"GET"
-    })
-    .then(res=>{
-        return res.json()
-    })
-    .catch(error=>console.log(error))
+export const filterProduct=async ()=>{
+    try {
+        const res = await fetch(`${API}/productlist/:name`, {
+            method: "GET"
+        });
+        return await res.json();
+    } catch (error) {
+        return console.log(error);
+    }
 }
 

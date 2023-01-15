@@ -3,20 +3,20 @@ import '../css/newcategory.css'
 import { createCategory } from "./auth/apiCategory"
 
 const AddCategory = () => {
-  const [categoryName, setCategoryName] = useState('')
+  const [name, setName] = useState('')
   const [error, setError] = useState(false)
   const [success, setSuccess] = useState(false)
 
   const handleChange = (e) => {
     setError('')
-    setCategoryName(e.target.value.toLowerCase())
+    setName(e.target.value.toLowerCase())
   }
   const clickSubmit = (e) => {
     e.preventDefault()
     setError('')
     setSuccess(false)
     //make request to post category
-    createCategory({categoryName})
+    createCategory({name})
       .then(data => {
         if (data.error) {
           setError(true)
@@ -25,7 +25,7 @@ const AddCategory = () => {
         else {
           setError('')
           setSuccess(true)
-          setCategoryName('') 
+          setName('') 
         }
       })
       .catch(err => {
@@ -54,7 +54,7 @@ const AddCategory = () => {
           {showSucc()}
           <div className="addCategoryItem" >
             <label>Category</label>
-            <input type="text" placeholder="Category Name" onChange={handleChange} value={categoryName} />
+            <input type="text" placeholder="Category Name" onChange={handleChange} value={name} />
           </div>
           <button className="addCategoryButton" onClick={clickSubmit}>Add Category</button>
         </form>

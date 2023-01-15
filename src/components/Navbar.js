@@ -23,7 +23,6 @@ const Navbar = () => {
           <Link to="/about"><li className='p-4'>About</li></Link>
           <Link to="/product"><li className='p-4'>Product</li></Link>
           <Link to="/service"><li className='p-4'>Services</li></Link>
-          
           <AnchorLink href='#contact'><li className='p-4'>Contact</li></AnchorLink>         
         </ul>
         <div onClick={handleNav} className='block md:hidden'>
@@ -38,11 +37,11 @@ const Navbar = () => {
             </h1>
           </Link>
           <ul className='p-4 uppercase'>
-            <li className='p-4 border-b border-gray-500'>Home</li>
-            <li className='p-4 border-b border-gray-500'>About</li>
-            <li className='p-4 border-b border-gray-500'>Product</li>
-            <li className='p-4 border-b border-gray-500'>Services</li>
-            <li className='p-4 border-b border-gray-500'>Contact</li>
+            <Link to="/"><li className='p-4 border-b border-gray-500'>Home</li></Link>
+            <Link><li className='p-4 border-b border-gray-500'>About</li></Link>
+            <Link to="/product"><li className='p-4 border-b border-gray-500'>Product</li></Link>
+            <Link><li className='p-4 border-b border-gray-500'>Services</li></Link>
+            <AnchorLink href='#contact'><li className='p-4'>Contact</li></AnchorLink>
           </ul>
         </div>
       </div>

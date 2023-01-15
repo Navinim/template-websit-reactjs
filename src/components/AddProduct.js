@@ -86,7 +86,7 @@ const AddProduct = () => {
                             <option>Choose Category</option>
                             {categories && categories.map((c, i) => (
                                 <option key={i} value={c._id}>
-                                    {c.categoryName}
+                                    {c.name}
                                 </option>
                             ))}
                         </select>
